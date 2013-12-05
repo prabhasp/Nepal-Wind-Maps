@@ -1,0 +1,16 @@
+Nepal Wind Maps
+===============
+
+This is an exploration to try and map wind data in Nepal. The first step is to make an overall map.
+
+```{r}
+# You will need to change the directory in the following line based on where
+# you have cloned https://github.com/prabhasp/Nepal-Wind-Maps
+# setwd("~/Code/Nepal-Wind-Maps/")
+require(raster)
+wind <- raster('data/Wind_5ewam.tif')
+
+require(rasterVis)
+gplot(wind) + geom_tile(aes(fill=value)) + 
+  scale_fill_gradient(low='yellow', high='red', trans='sqrt')
+```
