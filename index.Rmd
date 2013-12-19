@@ -8,7 +8,7 @@ This is an exploration to try and map wind data in Nepal. The first step is to m
 # you have cloned https://github.com/prabhasp/Nepal-Wind-Maps
 # setwd("~/Code/Nepal-Wind-Maps/")
 require(raster)
-wind <- raster('data/Wind_5ewam.tif')
+wind <- raster('data/Wind_0ewam.tif')
 
 require(rasterVis)
 gplot(wind) + geom_tile(aes(fill=value)) + 
